@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <link rel="stylesheet" type="text/css" media="screen,projection" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" media="screen,projection" href="css/options.css" />
+        <script src="js/default-settings.js"></script>
+        <script src="js/style.js"></script>
+        <script src="js/lib/jquery.min.js"></script>
+        <title>Settings - MyWallpaper</title>
+    </head>
+    <body>
+        <!-- Page starts here -->
+        <div id="page">
+            <div id="gradient">
+                <div class="options">
+                    <span title="Close Settings" id="close-redirect" fn="close-redirect" >x</span>
+                    <h1>My Wallpaper Settings</h1>
+                    <div id="message" class="message" style="z-index:99999;background:rgba(30,144,255,0.5);opacity:0;position:relative;line-height:1em; margin:30px auto 0;width: 100px; text-align: center;border:1px solid white;padding:10px">&nbsp;</div>
+                    <div class="options-main">
+                        <!-- Widget setting start -->
+                        <h2>Widgets Setting</h2>
+                        <label>
+                            <div class="option-name">Clock format</div>
+                            <select id="time_format">
+                                <option value="12">12</option>
+                                <option value="24">24</option>
+                            </select>
+                        </label>
+                        <!-- Widget setting ends -->
+                        <!-- Background wallpaper start -->			
+                        <h2>Wallpaper Setting</h2>
+                        <div id="wallpaper-option">
+                            <div id="wallpaper-option-left">
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" id="wallpaper_preview" width="300px" height="200px" />
+                                <button id="default-wallpaper">Default</button>
+                            </div>
+                            <div id="wallpaper-option-right">
+                                <input type="file" id="wallpaper_image" /> <br/><br/>		
+                                <select id="wallpaper_style">
+                                    <option value="stretch">Stretch</option>
+                                    <option value="tile">Tile</option>
+                                    <option value="fill">Fill</option>
+                                </select>
+                                <h3>Effects</h3>
+                                <label><input type="checkbox" id="wallpaper_gradient" />Gradient</label>
+                                <label><input type="checkbox" id="wallpaper_fadein" /></label>
+                            </div>
+                        </div>
+                        <!-- Background wallpaper ends -->
+                    </div>
+                    <p>All your changes are saved automatically. When you are done just hit the 'x' in the top right hand corner to go back to your Start Page</p>
+                </div>
+            </div>
+        </div>
+        <!-- End of page -->
+        <div class="footer">
+            <div class="footer-element"><a href="http://mywallpaper.co/index.html#contact-section" target="_blank"> Contact Us</a></div>
+            <div class="footer-element"><a href="http://mywallpaper.co/privacy-policy.html" target="_blank"> Privacy Policy</a></div>
+            <div class="footer-element"><a href="http://mywallpaper.co/eula.html" target="_blank">EULA</a></div>
+            <div class="footer-element"><a href="http://mywallpaper.co/uninstall.html" target="_blank">Uninstall</a></div>
+        </div>
+        <script src="js/file-handling.js"></script>
+        <script src="js/options.js"></script>
+        <script src="js/install.js"></script>
+    </body>
+</html>

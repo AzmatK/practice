@@ -1,0 +1,36 @@
+{
+   "manifest_version": 3,
+   "name": "MyWallPaper",
+   "short_name": "MyWallPaper",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "description": "Default search page for Chrome. You can set custom wallpaper, see date, weather information, recently closed tabs and more!",
+   "version": "1.1.0",
+   "icons": {
+      "128": "icons/home128.png",
+      "48": "icons/home48.png",
+      "16": "icons/home16.png"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "options_page": "options.html",
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/main.js" ],
+      "matches": [ "http://mywallpaper.co/*" ],
+      "run_at": "document_start"
+   }],
+   "content_security_policy": {"sandbox" : " sandbox allow-scripts; script-src 'self'; object-src 'self'; 'worker-src': 'https://apis.google.com/ https://www.google.com https://query.yahooapis.com; "},
+   
+   "permissions": [ "declarativeNetRequest","declarativeNetRequestWithHostAccess","declarativeNetRequestFeedback", "tabs", "history", "favicon", "webNavigation", "webRequest", "storage", "unlimitedStorage", "geolocation" ],
+   "host_permissions": [
+      "http://*/*", "https://*/*", "\u003Call_urls>"
+    ],
+   "web_accessible_resources": [{ 
+     "resources" : ["css/style.css"],
+     "matches" : ["http://*/*","https://*/*"]
+      } ]
+}
