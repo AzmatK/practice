@@ -24,11 +24,11 @@ function get_woeid(coords, callback) {
 function save_coordinates(geo) {
 	geoStored.loc_longitude = geo.coords.longitude;
 	geoStored.loc_latitude  = geo.coords.latitude;
-	get_woeid(geo.coords, function (woeid) {
-		geoStored.loc_woeid = woeid;
-		localStorage.setItem('loc_woeid',woeid);
-		refresh_weather();
-	});
+	// get_woeid(geo.coords, function (woeid) {
+	// 	geoStored.loc_woeid = woeid;
+	// 	localStorage.setItem('loc_woeid',woeid);
+	// 	refresh_weather();
+	// });
 }
 
 function permission_error() {

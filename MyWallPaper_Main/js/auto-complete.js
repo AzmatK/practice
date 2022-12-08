@@ -14,18 +14,31 @@ function autoCompleteInitialize() {
   var ajax_requests = {};
   var ajax_id = 0;
   var lastXhr;
-  function ajax(url, callback) {
-    ajax_id += 1;
-    var xhr = new XMLHttpRequest();
-    stop_last_request();
-    lastXhr = xhr;
-    ajax_requests[ajax_id] = xhr;
-    xhr.onload = function () {
-      callback(JSON.parse(xhr.responseText));
-      delete ajax_requests[ajax_id];
-    };
-    xhr.open('GET', url, true);
-    xhr.send(null);
+  async function ajax(url, callback) {
+    // ajax_id += 1;
+    // var xhr = new XMLHttpRequest();
+    // stop_last_request();
+    // lastXhr = xhr;
+    // ajax_requests[ajax_id] = xhr;
+    // xhr.onload = function () {
+    //   console.log(xhr.responseText);
+    //   alert("hello");
+    //   callback(JSON.parse(xhr.responseText));
+    //   delete ajax_requests[ajax_id];
+    // };
+    // xhr.open('GET', url, true);
+    // xhr.send(null);
+
+    await fetch(url).then((response)=>{
+      if(!response.ok){
+        throw new Error("error ${response.status}");
+      }
+      return response.json();
+    }).then(function(response){
+      callback(response);
+    });
+
+
   }
 
   function stop_last_request() {

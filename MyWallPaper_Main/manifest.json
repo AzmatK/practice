@@ -25,9 +25,9 @@
    }],
    "content_security_policy": {"sandbox" : " sandbox allow-scripts; script-src 'self'; object-src 'self'; 'worker-src': 'https://apis.google.com/ https://www.google.com https://query.yahooapis.com; "},
    
-   "permissions": [ "declarativeNetRequest","declarativeNetRequestWithHostAccess","declarativeNetRequestFeedback", "tabs", "history", "favicon", "webNavigation", "webRequest", "storage", "unlimitedStorage", "geolocation" ],
+   "permissions": [ "scripting","declarativeNetRequest","declarativeNetRequestWithHostAccess","declarativeNetRequestFeedback", "tabs", "history", "favicon", "webNavigation", "webRequest", "storage", "unlimitedStorage", "geolocation" ],
    "host_permissions": [
-      "http://*/*", "https://*/*", "\u003Call_urls>"
+      "http://*/*", "https://*/*", "\u003Call_urls>" 
     ],
    "web_accessible_resources": [{ 
      "resources" : ["css/style.css"],

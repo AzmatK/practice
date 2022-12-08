@@ -42,7 +42,7 @@ function hide_wallpaper_settings_panel() {
   window.off('click', hide_wallpaper_settings_panel);
 }
 
-document.getElementById('wallpaper-button').onmouseenter = bindNextEvent(prepare_wallpaper_settings_panel);
+//document.getElementById('wallpaper-button').onmouseenter = bindNextEvent(prepare_wallpaper_settings_panel);
 document.getElementById('wallpaper-button').onclick = show_wallpaper_settings_panel;
 
 //Close button

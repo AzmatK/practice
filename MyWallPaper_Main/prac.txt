@@ -1,1 +1,5 @@
 "permissions": [ "tabs", "history", "chrome://favicon/", "http://*/*", "https://*/*", "\u003Call_urls>", "webNavigation", "webRequest", "webRequestBlocking", "storage", "unlimitedStorage", "geolocation" ],
+
+
+
+,"chrome-extension://dgindahmhndammbpfidoihcppclfffba/index.html"
